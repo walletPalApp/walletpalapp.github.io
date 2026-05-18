@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Apple Pay Transaction Automation Setup Guide | WalletPal</title>
+    <meta name="description" content="Learn how to set up Apple Pay transaction automation with iPhone Shortcuts to track Apple Pay spending automatically in WalletPal.">
+    <meta name="keywords" content="apple pay transaction automation, Apple Pay expense tracker, how to track Apple Pay spending, automatic expense tracker iOS, iPhone transaction automation, Shortcuts transaction automation, automatic expense tracker app iOS">
+    <meta name="theme-color" content="#11bfe3">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Apple Pay Transaction Automation Setup Guide">
+    <meta property="og:description" content="A step-by-step guide to setting up Apple Pay transaction automation for automatic expense tracking on iPhone.">
+    <meta property="og:image" content="https://walletpalapp.github.io/images/landing/home-dashboard-light.png">
+    <meta property="og:url" content="https://walletpalapp.github.io/apple-pay-expense-tracker-shortcuts.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Apple Pay Transaction Automation Setup Guide">
+    <meta name="twitter:description" content="Set up Apple Pay transaction automation with Shortcuts and track Apple Pay spending with WalletPal.">
+    <meta name="twitter:image" content="https://walletpalapp.github.io/images/landing/home-dashboard-light.png">
+    <link rel="canonical" href="https://walletpalapp.github.io/apple-pay-expense-tracker-shortcuts.html">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to set up Apple Pay transaction automation on iPhone",
+        "description": "Set up Apple Pay transaction automation with iPhone Shortcuts to log Apple Pay expenses automatically with WalletPal.",
+        "image": "https://walletpalapp.github.io/images/landing/home-dashboard-light.png",
+        "totalTime": "PT5M",
+        "tool": [
+          {
+            "@type": "HowToTool",
+            "name": "iPhone"
+          },
+          {
+            "@type": "HowToTool",
+            "name": "Apple Shortcuts"
+          },
+          {
+            "@type": "HowToTool",
+            "name": "WalletPal"
+          }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Create an Apple Pay transaction automation",
+            "text": "Open Apple Shortcuts, go to Automation, tap New Automation, and choose Transaction."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Set it to run immediately",
+            "text": "Choose the cards or passes you want to track, then select Run Immediately so the automation can log spending without asking each time."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Add WalletPal's transaction action",
+            "text": "Create a new blank automation, add an action, search for WalletPal, and choose Add new transaction."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Map the transaction values",
+            "text": "Connect the Shortcut input values for transaction name, transaction amount and card name to the matching WalletPal fields."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Test the setup",
+            "text": "Use WalletPal's setup test to create a test transaction and confirm that the automation is working."
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can iPhone automatically track Apple Pay spending?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "iPhone can use Apple Pay transaction automation in Shortcuts to react when you tap a Wallet card or pass. WalletPal uses that automation to help log Apple Pay spending."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to connect my bank account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. WalletPal tracks transactions through Shortcuts automation or manual entry, so a bank connection is not required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why should I test the automation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Testing helps confirm that the WalletPal action is installed and notifications are enabled. The automation can still fail if the wrong Shortcut input values are mapped to the fields."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="WalletPal website navigation">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="WalletPal home">
+          <img class="brand-mark" src="apple-touch-icon.png" alt="">
+          <span>WalletPal</span>
+        </a>
+        <div class="nav-links" aria-label="Page sections">
+          <a href="index.html">Home</a>
+          <a href="#steps">Steps</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <a class="nav-cta" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="article-hero">
+        <div class="section-inner article-hero-inner">
+          <div class="article-copy">
+            <p class="eyebrow">Apple Pay transaction automation guide</p>
+            <h1>Set up Apple Pay transaction automation on iPhone.</h1>
+            <p>
+              This guide shows you how to set up Apple Pay transaction automation with iPhone Shortcuts, so WalletPal can log Apple Pay spending automatically without linking your bank account.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download WalletPal</a>
+              <a class="button button-secondary" href="#steps">Start setup</a>
+            </div>
+          </div>
+          <div class="article-phone" aria-hidden="true">
+            <div class="phone-frame">
+              <img src="images/landing/home-dashboard-light.png" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" aria-labelledby="why-setup-heading">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Why this exists</p>
+            <h2 id="why-setup-heading">Manual expense tracking is easy to abandon.</h2>
+            <p>
+              Most budget trackers fail when you forget to add a few transactions. WalletPal uses Apple Pay transaction automation as a lightweight way to keep your iPhone spending tracker up to date while keeping bank login details out of it.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">1</div>
+              <h3>Pay with Apple Pay</h3>
+              <p>The Apple Pay transaction automation can run when you tap a selected card or pass.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">2</div>
+              <h3>Shortcuts passes the details</h3>
+              <p>The transaction name, amount and card name are mapped into WalletPal's add transaction action.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-icon" aria-hidden="true">3</div>
+              <h3>WalletPal updates your budget</h3>
+              <p>The new expense appears in your dashboard, category spend, budget progress and notifications.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="steps" aria-labelledby="steps-heading">
+        <div class="section-inner article-layout">
+          <aside class="article-sidebar">
+            <div class="sidebar-card">
+              <p class="eyebrow">Before you start</p>
+              <ul>
+                <li>Install WalletPal on your iPhone.</li>
+                <li>Open the Shortcuts app.</li>
+                <li>Enable notifications if you want setup confirmation and budget alerts.</li>
+                <li>Allow around five minutes for setup.</li>
+              </ul>
+            </div>
+          </aside>
+          <div class="steps-list">
+            <div class="section-heading">
+              <p class="eyebrow">Step-by-step</p>
+              <h2 id="steps-heading">Set up automatic Apple Pay transaction logging.</h2>
+            </div>
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <div>
+                <h3>Open Shortcuts and choose Transaction</h3>
+                <p>Open the Apple Shortcuts app, go to <strong>Automation</strong>, tap <strong>New Automation</strong>, then select <strong>Transaction</strong> from the list.</p>
+                <div class="tutorial-image-grid">
+                  <img class="tutorial-image" src="images/tutorial/automation-tab.webp" alt="Shortcuts Automation tab selected">
+                  <img class="tutorial-image" src="images/tutorial/no-automations.webp" alt="Shortcuts New Automation button">
+                  <img class="tutorial-image" src="images/tutorial/transaction-option.webp" alt="Shortcuts Transaction automation option">
+                </div>
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <div>
+                <h3>Select the cards you want to track</h3>
+                <p>Choose the Wallet cards or passes you want WalletPal to track. If you use multiple cards for everyday spending, select each one you want included.</p>
+              </div>
+            </article>
+            <article class="step-card with-media">
+              <span class="step-number">03</span>
+              <div>
+                <h3>Set the automation to Run Immediately</h3>
+                <p>Choose <strong>Run Immediately</strong> so the automation can log expenses without asking for confirmation every time you pay.</p>
+                <img class="tutorial-image" src="images/tutorial/run-immediately.webp" alt="Shortcuts automation set to Run Immediately">
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-number">04</span>
+              <div>
+                <h3>Add WalletPal's Add new transaction action</h3>
+                <p>Under Get Started, choose <strong>New Blank Automation</strong>, tap <strong>Add Action</strong>, search for WalletPal and select <strong>Add new transaction</strong>.</p>
+                <div class="tutorial-image-grid">
+                  <img class="tutorial-image" src="images/tutorial/new-blank-automation.webp" alt="Shortcuts New Blank Automation tile">
+                  <img class="tutorial-image" src="images/tutorial/walletpal-action.webp" alt="WalletPal Add new transaction Shortcuts action">
+                </div>
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-number">05</span>
+              <div>
+                <h3>Map the transaction fields</h3>
+                <p>Connect the transaction name, amount and card name fields to the matching values from the Shortcut input. This is the part that makes the automatic expense tracker accurate.</p>
+                <img class="tutorial-image" src="images/tutorial/map-fields.webp" alt="WalletPal transaction name, amount and card name fields mapped from Shortcut input">
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-number">06</span>
+              <div>
+                <h3>Test the setup inside WalletPal</h3>
+                <p>WalletPal can create a test transaction and check for the expected notification. A successful test confirms the app-side setup is working, but the real automation still depends on mapping the correct Shortcut values.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section privacy-band">
+        <div class="section-inner">
+          <div>
+            <p class="eyebrow">Important note</p>
+            <h2>Automatic tracking works best when the Shortcut fields are mapped correctly.</h2>
+            <p>
+              WalletPal can confirm that its transaction action and notifications are working. If the automation later logs the wrong details, double-check that the name, amount and card name fields are connected to the matching Shortcut input values.
+            </p>
+          </div>
+          <div class="privacy-list">
+            <div class="privacy-item">
+              <strong>Use the correct transaction input</strong>
+              <p>Choose the values provided by the Transaction automation rather than typing fixed text into each field.</p>
+            </div>
+            <div class="privacy-item">
+              <strong>Keep notifications enabled</strong>
+              <p>Notifications help confirm when a new transaction has been logged and when a budget needs attention.</p>
+            </div>
+            <div class="privacy-item">
+              <strong>Review your first real transaction</strong>
+              <p>After your next Apple Pay purchase, open WalletPal and confirm the amount, name and card look right.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="faq" aria-labelledby="guide-faq-heading">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">FAQ</p>
+            <h2 id="guide-faq-heading">Common questions about Apple Pay expense tracking.</h2>
+          </div>
+          <div class="faq-grid">
+            <article class="faq-item">
+              <h3>Does this connect to my bank?</h3>
+              <p>No. WalletPal is designed as an automatic expense tracker app for iOS that does not require bank linking.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Will it track every card?</h3>
+              <p>It tracks the cards or passes you select in the Apple Pay transaction automation. You can update the automation if you add more cards later.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Can I still add expenses manually?</h3>
+              <p>Yes. Manual entry is available for cash, bank transfers, online payments or anything else that does not come through the automation.</p>
+            </article>
+            <article class="faq-item">
+              <h3>What happens after a transaction is logged?</h3>
+              <p>WalletPal updates your spending dashboard, category insights, budgets and notifications based on the transaction details.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="section-inner">
+          <p class="eyebrow">Automatic expense tracker app for iPhone</p>
+          <h2>Ready to make expense tracking less manual?</h2>
+          <p>
+            Download WalletPal, set up Apple Pay transaction automation, and start tracking Apple Pay spending with less admin.
+          </p>
+          <div class="hero-actions" style="justify-content: center;">
+            <a class="button button-primary" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download WalletPal</a>
+            <a class="button button-secondary" href="index.html">Back to homepage</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© WalletPal</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-use.html">Terms of Use</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
