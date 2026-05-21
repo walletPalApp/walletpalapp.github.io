@@ -267,6 +267,13 @@ h1 {
   margin-bottom: 34px;
 }
 
+.section-heading-centered {
+  max-width: 840px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
 .section-heading h2 {
   margin-bottom: 14px;
   font-size: 3rem;
@@ -422,9 +429,9 @@ h1 {
 .keyword-strip span {
   padding: 9px 13px;
   border-radius: 999px;
-  color: var(--cyan-dark);
-  background: #e9f9fd;
-  border: 1px solid rgba(2, 126, 160, 0.14);
+  color: #075f78;
+  background: #d7f3fb;
+  border: 1px solid rgba(7, 95, 120, 0.16);
   font-weight: 800;
   font-size: 0.9rem;
 }
@@ -616,6 +623,15 @@ h1 {
   margin-left: auto;
 }
 
+.article-phone .article-mockup-frame {
+  width: 360px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
 .article-layout {
   display: grid;
   grid-template-columns: 310px minmax(0, 1fr);
@@ -646,6 +662,24 @@ h1 {
   gap: 16px;
 }
 
+.guide-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.guide-summary span {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: 0 14px 38px rgba(18, 32, 45, 0.06);
+  color: var(--ink);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
 .step-card {
   display: grid;
   grid-template-columns: 72px minmax(0, 1fr);
@@ -674,6 +708,7 @@ h1 {
   margin-top: 18px;
   border-radius: 18px;
   border: 1px solid var(--line);
+  background: #f6f8fb;
 }
 
 .tutorial-image-grid {
@@ -684,9 +719,39 @@ h1 {
 }
 
 .tutorial-image-grid .tutorial-image {
-  height: 100%;
+  height: 280px;
   margin-top: 0;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.inline-download-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid rgba(17, 191, 227, 0.24);
+  border-radius: 18px;
+  background: var(--surface-soft);
+}
+
+.inline-download-cta strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+
+.inline-download-cta p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.inline-download-cta .button {
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: 0 16px;
+  white-space: nowrap;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -785,6 +850,7 @@ h1 {
   .privacy-band .section-inner,
   .comparison,
   .faq-grid,
+  .guide-summary,
   .article-hero-inner,
   .article-layout {
     grid-template-columns: 1fr;
@@ -813,6 +879,10 @@ h1 {
 
   .article-phone .phone-frame {
     margin: 0 auto;
+  }
+
+  .article-phone .article-mockup-frame {
+    width: min(360px, 86vw);
   }
 }
 
@@ -891,5 +961,18 @@ h1 {
 
   .tutorial-image-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tutorial-image-grid .tutorial-image {
+    height: auto;
+  }
+
+  .inline-download-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .inline-download-cta .button {
+    width: 100%;
   }
 }
