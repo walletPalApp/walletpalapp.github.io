@@ -20,6 +20,15 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPF4PQ37XW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BPF4PQ37XW');
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -81,7 +90,7 @@
           <a href="apple-pay-expense-tracker-shortcuts.html">Automatic tracking setup guide</a>
           <a href="#faq">FAQ</a>
         </div>
-        <a class="nav-cta" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download</a>
+        <a class="nav-cta js-download-walletpal" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download</a>
       </nav>
     </header>
 
@@ -98,7 +107,7 @@
             WalletPal helps you log Apple Pay transactions through Apple Shortcuts, build smarter budgets, and keep an eye on subscriptions and bills without linking your bank account.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download on the App Store</a>
+            <a class="button button-primary js-download-walletpal" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download on the App Store</a>
             <a class="button button-secondary" href="#automatic-tracking">See how it works</a>
           </div>
           <div class="hero-points" aria-label="WalletPal highlights">
@@ -376,7 +385,7 @@
             Track Apple Pay spending, build smart budgets, monitor subscriptions and bills, and get alerts before money quietly disappears.
           </p>
           <div class="hero-actions" style="justify-content: center;">
-            <a class="button button-primary" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download WalletPal</a>
+            <a class="button button-primary js-download-walletpal" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download WalletPal</a>
           </div>
         </div>
       </section>
@@ -391,5 +400,19 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.querySelectorAll('.js-download-walletpal').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'download_walletpal_click', {
+              event_category: 'conversion',
+              event_label: link.textContent.trim(),
+              link_url: link.href,
+              page_location: window.location.href
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
