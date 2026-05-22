@@ -365,6 +365,15 @@ h1 {
   line-height: 1.55;
 }
 
+.guide-callout-button {
+  flex: 0 0 auto;
+  max-width: 260px;
+  min-height: 54px;
+  padding: 0 22px;
+  text-align: center;
+  white-space: normal;
+}
+
 .showcase {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -662,24 +671,6 @@ h1 {
   gap: 16px;
 }
 
-.guide-summary {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 28px;
-}
-
-.guide-summary span {
-  padding: 20px;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  background: var(--surface);
-  box-shadow: 0 14px 38px rgba(18, 32, 45, 0.06);
-  color: var(--ink);
-  font-weight: 800;
-  line-height: 1.35;
-}
-
 .step-card {
   display: grid;
   grid-template-columns: 72px minmax(0, 1fr);
@@ -722,6 +713,34 @@ h1 {
   height: 280px;
   margin-top: 0;
   object-fit: contain;
+}
+
+.ios-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(120px, 220px);
+  gap: 14px;
+  align-items: center;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(17, 191, 227, 0.08);
+}
+
+.ios-note p {
+  margin-bottom: 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.ios-note strong {
+  color: var(--ink);
+}
+
+.ios-note img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--line);
 }
 
 .inline-download-cta {
@@ -850,7 +869,6 @@ h1 {
   .privacy-band .section-inner,
   .comparison,
   .faq-grid,
-  .guide-summary,
   .article-hero-inner,
   .article-layout {
     grid-template-columns: 1fr;
@@ -965,6 +983,10 @@ h1 {
 
   .tutorial-image-grid .tutorial-image {
     height: auto;
+  }
+
+  .ios-note {
+    grid-template-columns: 1fr;
   }
 
   .inline-download-cta {

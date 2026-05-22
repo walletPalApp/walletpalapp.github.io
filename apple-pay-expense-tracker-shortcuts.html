@@ -46,7 +46,7 @@
           {
             "@type": "HowToStep",
             "name": "Create an Apple Pay transaction automation",
-            "text": "Open Apple Shortcuts, go to Automation, tap New Automation, and choose Transaction."
+            "text": "Open Apple Shortcuts, go to Automation, tap New Automation, and choose Transaction. Since iOS 26 this option is called Wallet."
           },
           {
             "@type": "HowToStep",
@@ -99,6 +99,14 @@
               "@type": "Answer",
               "text": "Testing helps confirm that the WalletPal action is installed and notifications are enabled. The automation can still fail if the wrong Shortcut input values are mapped to the fields."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is my Apple Pay transaction automation not working?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Check that the automation is set to Run Immediately, that the app action has been added, and that the transaction name, amount and card values are mapped from the Shortcut input."
+            }
           }
         ]
       }
@@ -142,23 +150,6 @@
         </div>
       </section>
 
-      <section class="section section-alt" aria-labelledby="why-setup-heading">
-        <div class="section-inner">
-          <div class="section-heading section-heading-centered">
-            <p class="eyebrow">What this guide covers</p>
-            <h2 id="why-setup-heading">Use Shortcuts to send Apple Pay transaction details somewhere useful.</h2>
-            <p>
-              The same Apple Pay transaction automation can be used with different apps. You can send the values to Numbers, a spreadsheet, or any app with a compatible Shortcuts action. WalletPal is used here because it is built specifically for automatic expense tracking, budgets and spending alerts.
-            </p>
-          </div>
-          <div class="guide-summary">
-            <span>Choose the Apple Pay transaction trigger</span>
-            <span>Set it to run immediately</span>
-            <span>Send the transaction details to your chosen app</span>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="steps" aria-labelledby="steps-heading">
         <div class="section-inner article-layout">
           <aside class="article-sidebar">
@@ -176,7 +167,7 @@
             <div class="section-heading">
               <p class="eyebrow">Step-by-step</p>
               <h2 id="steps-heading">Set up automatic Apple Pay transaction logging.</h2>
-              <p>Follow the steps in order. The screenshots use WalletPal, but the Shortcuts trigger is the same if you are sending Apple Pay transactions to another compatible app.</p>
+              <p>Follow the steps in order. The screenshots use WalletPal, but the Transaction automation trigger is the same if you are sending Apple Pay transactions to another compatible app.</p>
             </div>
             <article class="step-card">
               <span class="step-number">01</span>
@@ -186,8 +177,12 @@
                 <div class="tutorial-image-grid">
                   <img class="tutorial-image" src="images/tutorial/automation-tab.webp" alt="Shortcuts Automation tab selected">
                   <img class="tutorial-image" src="images/tutorial/no-automations.webp" alt="Shortcuts New Automation button">
-                  <img class="tutorial-image" src="images/tutorial/transaction-option.webp" alt="Shortcuts Transaction automation option">
+                  <img class="tutorial-image" src="images/tutorial/transaction-option.webp" alt="Shortcuts Transaction automation option for Apple Pay transactions">
                 </div>
+                <aside class="ios-note">
+                  <p><strong>Using iOS 26?</strong> Apple renamed this automation from <strong>Transaction</strong> to <strong>Wallet</strong>. Choose <strong>Wallet</strong> if that is what appears on your iPhone.</p>
+                  <img src="images/tutorial/wallet-option-ios26.png" alt="Shortcuts Wallet automation option on iOS 26">
+                </aside>
               </div>
             </article>
             <article class="step-card">
@@ -242,28 +237,38 @@
         </div>
       </section>
 
-      <section class="section privacy-band">
+      <section class="section section-alt" id="troubleshooting" aria-labelledby="troubleshooting-heading">
         <div class="section-inner">
-          <div>
-            <p class="eyebrow">Important note</p>
-            <h2>Automatic tracking works best when the Shortcut fields are mapped correctly.</h2>
-            <p>
-              The automation is only as accurate as the values you map. If a logged transaction later looks wrong, double-check that the name, amount and card name fields are connected to the matching Shortcut input values.
-            </p>
+          <div class="section-heading">
+            <p class="eyebrow">Troubleshooting</p>
+            <h2 id="troubleshooting-heading">Apple Pay transaction automation not working?</h2>
+            <p>These are the most common things to check if the automation does not run or the saved transaction looks wrong.</p>
           </div>
-          <div class="privacy-list">
-            <div class="privacy-item">
-              <strong>Use the correct transaction input</strong>
-              <p>Choose the values provided by the Transaction automation rather than typing fixed text into each field.</p>
-            </div>
-            <div class="privacy-item">
-              <strong>Keep notifications enabled</strong>
-              <p>Notifications help confirm when a new transaction has been logged and when a budget needs attention.</p>
-            </div>
-            <div class="privacy-item">
-              <strong>Review your first real transaction</strong>
-              <p>After your next Apple Pay purchase, open your chosen app and confirm the amount, name and card look right.</p>
-            </div>
+          <div class="faq-grid">
+            <article class="faq-item">
+              <h3>The Transaction option is not showing</h3>
+              <p>Make sure you are creating a personal automation in the Shortcuts app and that your iPhone supports Wallet transaction automations. On iOS 26, look for <strong>Wallet</strong> instead.</p>
+            </article>
+            <article class="faq-item">
+              <h3>The automation asks before running</h3>
+              <p>Edit the automation and choose <strong>Run Immediately</strong>. This lets it run without asking each time you use Apple Pay.</p>
+            </article>
+            <article class="faq-item">
+              <h3>The app action is not appearing</h3>
+              <p>Open the app once, then return to Shortcuts and search for the app name again. If it still does not appear, check that the app supports Shortcuts actions.</p>
+            </article>
+            <article class="faq-item">
+              <h3>The wrong amount or name is being saved</h3>
+              <p>Check the mapped fields. The name, amount and card should come from the Shortcut input values, not typed text or the wrong variable.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Notifications are not appearing</h3>
+              <p>Check iPhone notification settings for your chosen app. WalletPal uses notifications to confirm new transactions and warn you about budgets.</p>
+            </article>
+            <article class="faq-item">
+              <h3>The first real transaction looks wrong</h3>
+              <p>Go back to the automation and review each mapped value. Once the fields are mapped correctly, future transactions should be cleaner.</p>
+            </article>
           </div>
         </div>
       </section>
