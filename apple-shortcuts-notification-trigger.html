@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to trigger shortcuts when i get a notification | WalletPal</title>
+    <meta name="description" content="Learn how to setup the Apple Shortcuts notification automation on iPhone. This step-by-step guide shows how to trigger shortcuts when you get a notification and pass the title, subtitle and body into WalletPal or another app.">
+    <meta name="keywords" content="Apple shortcuts notification trigger, how to trigger shortcuts when i get a notification, how to setup the apple shortcuts notification automation, shortcuts notification automation, apple shortcuts notification trigger, notification automation iPhone, WalletPal notification automation">
+    <meta name="theme-color" content="#11bfe3">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to trigger shortcuts when i get a notification">
+    <meta property="og:description" content="A step-by-step tutorial for setting up the Apple Shortcuts notification trigger and passing notification title, subtitle and body into WalletPal or another app.">
+    <meta property="og:image" content="https://walletpalapp.github.io/images/tutorial/notification-trigger-step-1.jpg">
+    <meta property="og:url" content="https://walletpalapp.github.io/apple-shortcuts-notification-trigger.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to trigger shortcuts when i get a notification">
+    <meta name="twitter:description" content="Set up the Apple Shortcuts notification automation and map notification title, subtitle and body into WalletPal.">
+    <meta name="twitter:image" content="https://walletpalapp.github.io/images/tutorial/notification-trigger-step-1.jpg">
+    <link rel="canonical" href="https://walletpalapp.github.io/apple-shortcuts-notification-trigger.html">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BPF4PQ37XW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BPF4PQ37XW');
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to trigger shortcuts when i get a notification",
+        "description": "Set up the Apple Shortcuts notification automation so a shortcut can run when a notification arrives from a chosen app and pass through the notification title, subtitle and body.",
+        "image": "https://walletpalapp.github.io/images/tutorial/notification-trigger-step-1.jpg",
+        "totalTime": "PT5M",
+        "tool": [
+          {
+            "@type": "HowToTool",
+            "name": "iPhone"
+          },
+          {
+            "@type": "HowToTool",
+            "name": "Apple Shortcuts"
+          },
+          {
+            "@type": "HowToTool",
+            "name": "WalletPal"
+          }
+        ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Create a new notification automation",
+            "text": "Open Shortcuts, tap Automation, create a new automation, and choose Notification as the trigger."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Choose the source app",
+            "text": "Tap the App field and select the app whose notifications should trigger the shortcut. In this guide, Wallet is the source app."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Add the action you want to run",
+            "text": "Search for the app that will handle the notification data, then choose the action you want to run. This example uses WalletPal's Add new transaction action."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Map the notification fields",
+            "text": "Use Shortcut Input to pass the notification subtitle, body and title into the matching fields in your chosen app."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Finish and test it",
+            "text": "Tap Done, then send a test notification and confirm that the shortcut runs the way you expect."
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Apple Shortcuts notification trigger?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It is a new automation trigger in Shortcuts that runs when a notification is received from a selected app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can shortcuts use notification title, subtitle and body?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The notification trigger can pass the title, subtitle and body through Shortcut Input so you can map them into app actions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I setup the apple shortcuts notification automation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Create a new automation, select Notification, choose the source app, add the action you want to run, map the notification fields and then test the automation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does WalletPal work with the notification trigger?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. WalletPal can be used as the app action in the shortcut, so notification data can become a new transaction or another WalletPal action."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header" aria-label="WalletPal website navigation">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="WalletPal home">
+          <img class="brand-mark" src="apple-touch-icon.png" alt="">
+          <span>WalletPal</span>
+        </a>
+        <div class="nav-links" aria-label="Page sections">
+          <a href="index.html">Home</a>
+          <a href="#steps">Steps</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <a class="nav-cta js-download-walletpal" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="article-hero">
+        <div class="section-inner article-hero-inner">
+          <div class="article-copy">
+            <p class="eyebrow">Apple Shortcuts notification trigger guide</p>
+            <h1>How to trigger shortcuts when i get a notification</h1>
+            <p>
+              In iOS27, Apple introduced a new shortcut automation trigger in the Shortcuts app called “notification”. This feature allows you to automatically execute any shortcut after receiving a notification from any app. While there are many use cases for this feature, this guide will be using notifications from Apple Wallet to automatically log your transactions into the WalletPal app.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary js-download-walletpal" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download WalletPal</a>
+              <a class="button button-secondary" href="#steps">Start setup</a>
+            </div>
+            <div class="keyword-strip" aria-label="Related search terms">
+              <span>Apple shortcuts notification trigger</span>
+              <span>How to trigger shortcuts when i get a notification</span>
+              <span>How to setup the apple shortcuts notification automation</span>
+            </div>
+          </div>
+          <div class="article-phone" aria-hidden="true">
+            <div class="phone-frame article-mockup-frame">
+              <img src="images/tutorial/notification-trigger-step-1.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="steps" aria-labelledby="steps-heading">
+        <div class="section-inner article-layout">
+          <aside class="article-sidebar">
+            <div class="sidebar-card">
+              <p class="eyebrow">Before you start</p>
+              <ul>
+                <li>You must be on iOS27.</li>
+                <li>Decide which app notification should trigger the shortcut.</li>
+                <li>Have the app action ready to search for, such as WalletPal.</li>
+                <li>Allow a few minutes to map the fields and test the automation.</li>
+              </ul>
+            </div>
+          </aside>
+          <div class="steps-list">
+            <div class="section-heading">
+              <p class="eyebrow">Step-by-step</p>
+              <h2 id="steps-heading">Set up the Apple Shortcuts notification automation.</h2>
+              <p>Follow the steps below to trigger a shortcut from an incoming notification, then pass the notification title, subtitle and body into WalletPal or another compatible app.</p>
+            </div>
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <div>
+                <h3>Create a new automation and choose Notification</h3>
+                <p>Open Shortcuts, tap <strong>Automation</strong>, create a new automation, and select <strong>Notification</strong> as the trigger.</p>
+                <img class="tutorial-image" src="images/tutorial/notification-trigger-step-1.jpg" alt="Apple Shortcuts Notification automation trigger">
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <div>
+                <h3>Choose the app whose notifications should trigger it</h3>
+                <p>Tap the <strong>App</strong> label and pick the app you want to listen to. In this example, Apple Wallet is the source app, so the shortcut will trigger when an Apple Wallet notification arrives.</p>
+                <div class="tutorial-image-grid">
+                  <img class="tutorial-image" src="images/tutorial/notification-trigger-step-2.jpg" alt="Apple Shortcuts notification automation before selecting the source app">
+                  <img class="tutorial-image" src="images/tutorial/notification-trigger-step-3.jpg" alt="Apple Shortcuts notification automation with Wallet selected as the source app">
+                </div>
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <div>
+                <h3>Add the app action you want to run</h3>
+                <p>Use the <strong>Search Actions</strong> box to find the app that will handle the notification data. In this tutorial, search for WalletPal and choose <strong>Add new transaction</strong>.</p>
+                <img class="tutorial-image" src="images/tutorial/notification-trigger-step-4.jpg" alt="WalletPal Add new transaction action in Apple Shortcuts">
+                <aside class="inline-download-cta">
+                  <div>
+                    <strong>Want the notification trigger to become a useful workflow?</strong>
+                    <p>WalletPal can save your Apple Pay transactions automatically, help you set budgets, keep on top of subscriptions and bills, and warn you when you are close to overspending.</p>
+                  </div>
+                  <a class="button button-primary js-download-walletpal" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download WalletPal</a>
+                </aside>
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-number">04</span>
+              <div>
+                <h3>Map the notification fields to your action</h3>
+                <p>Configure each field so it uses the right part of the notification. For the WalletPal example: <strong>Transaction name</strong> uses <strong>Subtitle</strong>, <strong>Transaction amount</strong> uses <strong>Body</strong>, and <strong>Card name</strong> uses <strong>Title</strong>.</p>
+                <img class="tutorial-image" src="images/tutorial/notification-trigger-step-5.jpg" alt="WalletPal fields mapped to notification subtitle body and title in Shortcuts">
+                <aside class="ios-note">
+                  <p><strong>Shortcut Input is the key step.</strong> Tap each field, choose <strong>Select Variable</strong>, then choose <strong>Shortcut Input</strong> and pick the part of the Apple Wallet notification you want to pass through.</p>
+                  <img src="images/tutorial/notification-trigger-step-5.jpg" alt="Notification title, subtitle and body mapped to WalletPal fields">
+                </aside>
+              </div>
+            </article>
+            <article class="step-card">
+              <span class="step-number">05</span>
+              <div>
+                <h3>Tap Done and test the automation</h3>
+                <p>Once everything is mapped, tap <strong>Done</strong> and send a test notification. If the source app is correct and the fields are mapped properly, the shortcut should run and the data should land in the right place.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="faq" aria-labelledby="guide-faq-heading">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">FAQ</p>
+            <h2 id="guide-faq-heading">Common questions about the Apple Shortcuts notification trigger.</h2>
+            <p>If you are trying to figure out how to setup the apple shortcuts notification automation, these are the questions that usually come up first.</p>
+          </div>
+          <div class="faq-grid">
+            <article class="faq-item">
+              <h3>What does the notification trigger do?</h3>
+              <p>It runs a Shortcut when iPhone receives a notification from the app you selected, which makes it useful for lots of automations. In this guide, we use Apple Wallet notifications to log expenses in WalletPal.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Which parts of the notification can I use?</h3>
+              <p>You can pass the notification title, subtitle and body through Shortcut Input, then map each one to a different field in your app action.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Why does the automation say invalid at first?</h3>
+              <p>That usually happens before the source app has been chosen. Select the app in the Notification trigger and the automation should become valid again.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Can I use WalletPal with the notification trigger?</h3>
+              <p>Yes. WalletPal can be used as the action that receives the data, so Apple Wallet notification details can be mapped into a new expense without linking your bank account.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-light" aria-labelledby="related-heading">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Related guide</p>
+            <h2 id="related-heading">If you also want Apple Pay transaction automation, we have that covered too.</h2>
+            <p>Some people are looking for the notification trigger, while others want to log Apple Pay transactions. If that is the goal, read our separate step-by-step guide.</p>
+          </div>
+          <div class="guide-callout">
+            <div>
+              <p class="eyebrow">Apple Pay automation</p>
+              <h3>Need the transaction setup guide instead?</h3>
+              <p>Read the Apple Pay transaction automation tutorial and see how WalletPal can log Apple Pay spending automatically with Shortcuts.</p>
+            </div>
+            <a class="button button-primary guide-callout-button" href="apple-pay-expense-tracker-shortcuts.html">Open Apple Pay guide</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="section-inner">
+          <p class="eyebrow">WalletPal for iPhone</p>
+          <h2>Turn notification-driven shortcuts into something useful.</h2>
+          <p>
+            Download WalletPal, test the notification trigger, and use Shortcuts to pass notification title, subtitle and body into a workflow you actually want to keep.
+          </p>
+          <div class="hero-actions" style="justify-content: center;">
+            <a class="button button-primary js-download-walletpal" href="https://apps.apple.com/gb/app/smart-budget-walletpal/id6475526197">Download WalletPal</a>
+            <a class="button button-secondary" href="index.html">Back to homepage</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>© WalletPal</span>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-use.html">Terms of Use</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.querySelectorAll('.js-download-walletpal').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'download_walletpal_click', {
+              event_category: 'conversion',
+              event_label: link.textContent.trim(),
+              link_url: link.href,
+              page_location: window.location.href
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
